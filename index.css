@@ -1,4 +1,72 @@
 body {
     margin: 0;
     font-family: "Smythe", system-ui;
+    width: 600px;
+    color: #FFFFFF;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: url(images/diner.png);
+    background-size: cover;
+    background-position: center center;
+    padding: 30px;
+}
+
+header div{
+    padding-left: 30px;
+
+}
+.diner-name h1{
+    margin-bottom: 0;
+}
+.diner-name p{
+    margin-top: 0;
+}
+
+/* Menu items  */
+#menu-items {
+    height: 140px;
+}
+.item{
+    display: flex;
+    margin: 30px 10px;
+    border-bottom: 2px solid #d2d2d2;
+}
+.item-details {
+    margin-left: 10px;
+}
+.item-img{
+    font-size: 78.72px;
+}
+.item-name{
+    color: #000000;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+.item-ingredients{
+    color: #8B8B8B;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.item-price{
+    color: #000000;
+    font-size: 20px;
+    margin-top: 0;
+}
+.add-btn{
+    width: 40px;
+    height: 40px;
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 100%;
+    color: #3c3c3c;
+    background-color: #ffffff;
+    border: 1px solid #dedede;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-top: 10px;
+    cursor: pointer;
 }
