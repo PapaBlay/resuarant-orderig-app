@@ -1,6 +1,7 @@
 import { menuArray } from "./data.js"
 
 const menuItems = document.getElementById('menu-items')
+const summary = document.getElementById('order-summary')
 
 function renderMenu(){
     let menuItem = ''
@@ -16,6 +17,23 @@ function renderMenu(){
                     </div>`
     })
     menuItems.innerHTML = menuItem
+
+}
+renderMenu()
+
+
+
+function renderSummary(){
+    const addBtn = document.querySelectorAll('.add-btn')
+    addBtn.forEach(btn => {
+        btn.addEventListener('click', function(e){
+            console.log(e.target)
+            summary.innerHTML = `<h2 class="order-heading">Your Order</h2>
+
+                                `
+        })
+    })
+
 }
 
-renderMenu()
+renderSummary()
