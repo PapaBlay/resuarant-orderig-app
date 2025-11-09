@@ -82,3 +82,69 @@ header div{
     color: #000000;
     text-align: center;
 }
+
+/* Order Summary Styles */
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    justify-content: space-between;
+}
+
+.order-item-name {
+    color: #000000;
+    font-size: 20px;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: #BBBBBB;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: "Smythe", system-ui;
+}
+
+.remove-btn:hover {
+    color: #ff0000;
+}
+
+.order-item-price {
+    color: #000000;
+    font-size: 18px;
+    margin-left: auto;
+}
+
+
+.total-section{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0;
+    border-top: 2px solid #000000;
+}
+
+.total {
+    color: #000000;
+}
+.total-price{
+    color: #000000;
+    margin-left: auto;
+    font-size: 18px;
+}
+
+.complete-order{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    color: #ffffff;
+    background: #16DB99;
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.complete-order:hover{
+    background: #1a6b50;
+}
