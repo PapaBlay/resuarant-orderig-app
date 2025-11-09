@@ -134,7 +134,8 @@ header div{
     font-size: 18px;
 }
 
-.complete-order{
+.complete-order,
+.order-btn{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border: none;
     color: #ffffff;
@@ -144,7 +145,78 @@ header div{
     padding: 15px;
     margin-bottom: 20px;
     cursor: pointer;
+    border-radius: 3px;
 }
-.complete-order:hover{
+.complete-order:hover,
+.order-btn:hover{
     background: #1a6b50;
+}
+
+/* Form Modal */
+.btn-container {
+  text-align: right;
+}
+.close-btn {
+  border: none;
+  color: #757575;
+  background: transparent;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px 10px 0 0;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  opacity: 0.7;
+}
+#order-form {
+  display: none;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 400px;
+  width: 400px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 50vmax rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  padding: 10px;
+}
+
+.inner-payment-modal {
+  width: 350px;
+  margin: 0 auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.inner-payment-modal h2 {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+#form {
+  display: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  margin-top: 10px;
+  border: 1px solid #757575;
+  padding: 15px;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+/* Final message */
+.thank-you-message{
+    font-size: 32px;
+    text-align: center;
+    background: #ECFDF5;
+    color: #065F46;
+    padding: 20px;
+    margin-bottom: 30px;
 }

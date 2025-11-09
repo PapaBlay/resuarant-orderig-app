@@ -2,6 +2,7 @@ import { menuArray } from "./data.js"
 
 const menuItems = document.getElementById('menu-items')
 const summary = document.getElementById('order-summary')
+const orderBtn = document.querySelector('.order-btn')
 let currentOrder = []
 
 function renderMenu(){
@@ -82,6 +83,7 @@ function renderOrderSummary() {
             removeFromOrder(index)
         })
     })
+    document.querySelector('.complete-order').addEventListener('click', showOrderForm)
 }
 
 function removeFromOrder(index) {
@@ -90,6 +92,41 @@ function removeFromOrder(index) {
 
     // Re-render the order summary
     renderOrderSummary()
+
+}
+
+function showOrderForm() {
+    document.getElementById('order-form').style.display = 'block';
+
+    const orderForm = document.getElementById('order-form')
+    if (orderForm) {
+        orderForm.addEventListener('submit', handleFormSubmit)
+    }
+}
+
+function handleFormSubmit(e) {
+    e.preventDefault() // This prevents the page from refreshing
+
+    // Get the customer name from the form
+    const nameInput = document.getElementById('customer-name')
+    const customerName = nameInput ? nameInput.value : 'Customer'
+
+    // Hide the form
+    document.getElementById('order-form').style.display = 'none'
+
+    // Display the thank you message
+    showThankYouMessage(customerName)
+
+    // Clear the current order
+    currentOrder = []
+}
+
+function showThankYouMessage(customerName) {
+    summary.innerHTML = `
+        <div class="thank-you-message">
+            <p>Thanks, ${customerName}! Your order is on its way!</p>
+        </div>
+    `
 }
 
 // Initialize the app

@@ -17,7 +17,41 @@
             <div class="container">
                 <section id="menu-items"></section>
                 <section id="order-summary"></section>
-                <section id="order-form"></section>
+                <section id="order-form">
+                    <div class="btn-container">
+                        <button class="close-btn" id="close-btn">X</button>
+                    </div>
+                    <div class="inner-payment-modal">
+                        <h2>Enter card details</h2>
+                        <form id="form">
+                            <input
+                            type="text"
+                            id="customer-name"
+                            name="customer-name"
+                            placeholder="Enter your name"
+                            aria-label="customer-name"
+                            required
+                            />
+                            <input
+                            type="number"
+                            id="card-number"
+                            name="card-number"
+                            placeholder="Enter card number"
+                            aria-label="card-number"
+                            required
+                            />
+                            <input
+                            type="number"
+                            id="cvv"
+                            name="cvv"
+                            placeholder="Enter CVV"
+                            aria-label="cvv"
+                            required
+                            />
+                        <button type="submit" class="order-btn">Pay</button>
+                    </form>
+                </div>
+                </section>
                 <section id="order-complete"></section>
             </div>
         </main>
